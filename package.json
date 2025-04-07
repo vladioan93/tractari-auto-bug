@@ -1,0 +1,25 @@
+{
+  "name": "tractari-auto-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive single-page website for a car towing service",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "towing",
+    "car",
+    "service",
+    "responsive",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "^6.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 
