@@ -2,8 +2,20 @@
 const mobileMenuButton = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenuButton.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+mobileMenuButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('active');
+    mobileMenuButton.querySelector('i').classList.toggle('fa-bars');
+    mobileMenuButton.querySelector('i').classList.toggle('fa-times');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        mobileMenuButton.querySelector('i').classList.add('fa-bars');
+        mobileMenuButton.querySelector('i').classList.remove('fa-times');
+    }
 });
 
 // Smooth Scrolling for Navigation Links
