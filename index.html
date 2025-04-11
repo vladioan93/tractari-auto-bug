@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tractări Auto Non-Stop</title>
+    <title>Tractări Auto Non-Stop | Servicii de Tractare Auto în România</title>
+    <meta name="description" content="Servicii profesionale de tractări auto non-stop în toată țara. Tractare auto rapidă, transport utilaje și asistență rutieră 24/7. Sunați acum!">
+    <meta name="keywords" content="tractări auto, tractare auto, asistență rutieră, transport utilaje, tractare auto non-stop">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Tractări Auto Non-Stop | Servicii de Tractare Auto în România">
+    <meta property="og:description" content="Servicii profesionale de tractări auto non-stop în toată țara. Tractare auto rapidă, transport utilaje și asistență rutieră 24/7.">
+    <meta property="og:image" content="https://www.tractariauto-bug.ro/images/hero-bg.jpg">
+    <meta property="og:url" content="https://www.tractariauto-bug.ro">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Existing links -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -67,7 +77,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>Cu peste 10 ani de experiență în domeniul tractărilor auto, oferim servicii profesionale și rapide pentru toate tipurile de vehicule. Echipa noastră este disponibilă 24/7 pentru a vă ajuta în orice situație.</p>
-                    <p>Ne mândrim cu promptitudinea și profesionalismul nostru, oferind soluții personalizate pentru fiecare client.</p>
+                    <p>Ne mândrim cu promptitudinea și profesionalismul nostru, oferind soluții personalizate pentru fiecare client. Serviciile noastre acoperă toată țara, cu răspuns rapid și prețuri competitive.</p>
+                    <p>Utilizăm echipamente moderne și bine întreținute pentru a asigura siguranța vehiculului dumneavoastră în timpul transportului. Personalul nostru este bine pregătit și certificat pentru a oferi cele mai bune servicii de tractare auto.</p>
                 </div>
             </div>
         </div>
@@ -93,10 +104,10 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Nume" required>
-                        <input type="tel" placeholder="Telefon" required>
-                        <textarea placeholder="Mesaj" required></textarea>
+                    <form id="contactForm" action="https://formspree.io/f/tractariautobug@yahoo.com" method="POST">
+                        <input type="text" name="name" placeholder="Nume" required>
+                        <input type="tel" name="phone" placeholder="Telefon" required>
+                        <textarea name="message" placeholder="Mesaj" required></textarea>
                         <button type="submit" class="submit-button">Trimite Mesaj</button>
                     </form>
                 </div>
@@ -129,6 +140,52 @@
             </div>
         </div>
     </footer>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tractări Auto Non-Stop",
+      "image": "https://www.tractariauto-bug.ro/images/logo.png",
+      "description": "Servicii profesionale de tractări auto non-stop în toată țara. Tractare auto rapidă, transport utilaje și asistență rutieră 24/7.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Exemplu",
+        "addressLocality": "București",
+        "addressRegion": "București",
+        "postalCode": "010000",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.4268,
+        "longitude": 26.1025
+      },
+      "url": "https://www.tractariauto-bug.ro",
+      "telephone": "+40123456789",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/tractariauto",
+        "https://www.instagram.com/tractariauto",
+        "https://www.youtube.com/tractariauto"
+      ]
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>
