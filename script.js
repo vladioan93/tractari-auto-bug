@@ -40,6 +40,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
+        // If using Formspree, we don't need to prevent default
+        // The form will be submitted to Formspree automatically
+        
+        // Show loading state
+        const submitButton = this.querySelector('.submit-button');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Se trimite...';
+        submitButton.disabled = true;
+        
+        // If not using Formspree, uncomment this code:
+        /*
         e.preventDefault();
         
         // Get form data
@@ -53,6 +64,13 @@ if (contactForm) {
         // For now, we'll just show a success message
         alert('Mulțumim pentru mesaj! Vom reveni cu un răspuns în curând.');
         this.reset();
+        */
+        
+        // Reset button state after a delay (for Formspree)
+        setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }, 3000);
     });
 }
 
@@ -78,4 +96,32 @@ window.addEventListener('scroll', () => {
     }
     
     lastScroll = currentScroll;
+});
+
+// Lazy Loading Images
+document.addEventListener('DOMContentLoaded', function() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(function(img) {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        lazyImages.forEach(function(img) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    }
 }); 
