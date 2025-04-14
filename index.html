@@ -10,22 +10,22 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Tractări Auto Logo">
-            </div>
-            <div class="nav-links">
-                <a href="#home">Acasă</a>
-                <a href="#services">Servicii</a>
-                <a href="#about">Despre</a>
-                <a href="#contact">Contact</a>
+                <img src="assets/images/logo.png" alt="Tractări Auto Bug Logo">
             </div>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Acasă</a>
+                <a href="#services">Servicii</a>
+                <a href="#about">Despre Noi</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -39,25 +39,127 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="servicii" class="services">
         <div class="container">
             <h2>Serviciile Noastre</h2>
+            <div class="services-intro">
+                <p>Oferim o gamă completă de servicii de tractare auto, asigurându-ne că vehiculul dumneavoastră este în siguranță și ajunge la destinație în condiții optime.</p>
+            </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <!-- Images will be added dynamically -->
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-truck"></i>
-                    <h3>Tractări Auto</h3>
-                    <p>Servicii de tractare rapidă pentru toate tipurile de vehicule</p>
+                    <i class="fas fa-truck-pickup"></i>
+                    <h3>Tractare Auto</h3>
+                    <p>Servicii profesionale de tractare auto pentru toate tipurile de vehicule, de la mașini mici până la camioane.</p>
+                    <ul>
+                        <li>Tractare rutieră</li>
+                        <li>Tractare pe autostradă</li>
+                        <li>Tractare în oraș</li>
+                        <li>Asistență 24/7</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-truck-loading"></i>
-                    <h3>Transport Utilaje</h3>
-                    <p>Transport sigur pentru utilaje și echipamente grele</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-wrench"></i>
+                    <i class="fas fa-tools"></i>
                     <h3>Asistență Rutieră</h3>
-                    <p>Asistență tehnică și mecanică pe loc</p>
+                    <p>Asistență rapidă în caz de pană, accident sau alte situații de urgență pe drum.</p>
+                    <ul>
+                        <li>Schimbare anvelopă</li>
+                        <li>Pornire la rece</li>
+                        <li>Alimentare cu combustibil</li>
+                        <li>Reparații minore</li>
+                    </ul>
                 </div>
+                <div class="service-card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Transport Internațional</h3>
+                    <p>Servicii de transport auto la nivel internațional, cu asigurare completă și monitorizare GPS.</p>
+                    <ul>
+                        <li>Transport în UE</li>
+                        <li>Documentație completă</li>
+                        <li>Asigurare CMR</li>
+                        <li>Monitorizare GPS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Prețuri Servicii</h2>
+            <div class="pricing-intro">
+                <p>Prețurile noastre sunt competitive și transparente. Contactați-ne pentru oferte personalizate și servicii non-stop.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Tractare Auto</h3>
+                        <div class="price">
+                            <span class="amount">de la</span>
+                            <span class="currency">RON</span>
+                            <span class="value">150</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Tractare în oraș</li>
+                        <li><i class="fas fa-check"></i> Tractare pe autostradă</li>
+                        <li><i class="fas fa-check"></i> Vehicule până la 3.5 tone</li>
+                        <li><i class="fas fa-check"></i> Asistență 24/7</li>
+                    </ul>
+                    <a href="tel:+40763097957" class="pricing-button">
+                        <i class="fas fa-phone"></i> Sună pentru ofertă
+                    </a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Asistență Rutieră</h3>
+                        <div class="price">
+                            <span class="amount">de la</span>
+                            <span class="currency">RON</span>
+                            <span class="value">100</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Schimbare anvelopă</li>
+                        <li><i class="fas fa-check"></i> Pornire la rece</li>
+                        <li><i class="fas fa-check"></i> Alimentare combustibil</li>
+                        <li><i class="fas fa-check"></i> Reparații minore</li>
+                    </ul>
+                    <a href="tel:+40763097957" class="pricing-button">
+                        <i class="fas fa-phone"></i> Sună pentru ofertă
+                    </a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Transport Internațional</h3>
+                        <div class="price">
+                            <span class="amount">de la</span>
+                            <span class="currency">RON</span>
+                            <span class="value">2000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Transport în UE</li>
+                        <li><i class="fas fa-check"></i> Asigurare CMR</li>
+                        <li><i class="fas fa-check"></i> Monitorizare GPS</li>
+                        <li><i class="fas fa-check"></i> Documentație completă</li>
+                    </ul>
+                    <a href="tel:+40763097957" class="pricing-button">
+                        <i class="fas fa-phone"></i> Sună pentru ofertă
+                    </a>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p><i class="fas fa-info-circle"></i> Prețurile pot varia în funcție de distanță, tipul vehiculului și complexitatea serviciului. Contactați-ne pentru o ofertă personalizată.</p>
             </div>
         </div>
     </section>
@@ -69,7 +171,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>Cu peste 10 ani de experiență în domeniul tractărilor auto, oferim servicii profesionale și rapide pentru toate tipurile de vehicule. Echipa noastră este disponibilă 24/7 pentru a vă ajuta în orice situație.</p>
-                    <p>Ne mândrim cu promptitudinea și profesionalismul nostru, oferind soluții personalizate pentru fiecare client.</p>
+                    <p>Ne mândrim cu promptitudinea și profesionalismul nostru, oferind soluții personalizate pentru fiecare client. Serviciile noastre acoperă toată țara, cu răspuns rapid și prețuri competitive.</p>
+                    <p>Utilizăm echipamente moderne și bine întreținute pentru a asigura siguranța vehiculului dumneavoastră în timpul transportului. Personalul nostru este bine pregătit și certificat pentru a oferi cele mai bune servicii de tractare auto.</p>
                 </div>
             </div>
         </div>
@@ -119,13 +222,42 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>Ne găsești și pe rețelele sociale!</p>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Despre Noi</h3>
+                    <p>Oferim servicii profesionale de tractare auto cu peste 10 ani de experiență în domeniu. Ne mândrim cu promptitudinea și profesionalismul serviciilor noastre.</p>
                 </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="footer-column">
+                    <h3>Contact Rapid</h3>
+                    <div class="contact-links">
+                        <a href="tel:+40763097957"><i class="fas fa-phone"></i> +40 763 097 957</a>
+                        <a href="mailto:tractariautobug@yahoo.com"><i class="fas fa-envelope"></i> tractariautobug@yahoo.com</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> București, România</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-row">
+                        <div class="footer-subcolumn">
+                            <h3>Program</h3>
+                            <div class="schedule">
+                                <p><i class="fas fa-clock"></i> Luni - Duminică</p>
+                                <p><i class="fas fa-hourglass-half"></i> Non-Stop</p>
+                            </div>
+                        </div>
+                        <div class="footer-subcolumn">
+                            <h3>Urmărește-ne</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025. T. Toate drepturile rezervate.</p>
                 </div>
             </div>
         </div>
